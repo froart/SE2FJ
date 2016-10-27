@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE abiword PUBLIC "-//ABISOURCE//DTD AWML 1.0 Strict//EN" "http://www.abisource.com/awml.dtd">
+<abiword template="false" xmlns:ct="http://www.abisource.com/changetracking.dtd" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:math="http://www.w3.org/1998/Math/MathML" xid-max="158" xmlns:dc="http://purl.org/dc/elements/1.1/" styles="unlocked" fileformat="1.0" xmlns:svg="http://www.w3.org/2000/svg" xmlns:awml="http://www.abisource.com/awml.dtd" xmlns="http://www.abisource.com/awml.dtd" xmlns:xlink="http://www.w3.org/1999/xlink" version="0.99.2" xml:space="preserve" props="dom-dir:ltr; document-footnote-restart-section:0; document-endnote-type:numeric; document-endnote-place-enddoc:1; document-endnote-initial:1; lang:en-US; document-endnote-restart-section:0; document-footnote-restart-page:0; document-footnote-type:numeric; document-footnote-initial:1; document-endnote-place-endsection:0">
+<!-- ======================================================================== -->
+<!-- This file is an AbiWord document.                                        -->
+<!-- AbiWord is a free, Open Source word processor.                           -->
+<!-- More information about AbiWord is available at http://www.abisource.com/ -->
+<!-- You should not edit this file by hand.                                   -->
+<!-- ======================================================================== -->
+
+<metadata>
+<m key="abiword.date_last_changed">Thu Oct 27 17:25:51 2016
+</m>
+<m key="abiword.generator">AbiWord</m>
+<m key="dc.creator">Artemiy</m>
+<m key="dc.date">Tue Oct 25 22:09:13 2016
+</m>
+<m key="dc.format">application/x-abiword</m>
+</metadata>
+<rdf>
+</rdf>
+<history version="59" edit-time="16132" last-saved="1477581951" uid="81420e80-9aee-11e6-9673-ce1ce4633e42">
+<version id="3" started="1477426153" uid="44b1b93a-9af2-11e6-9673-ce1ce4633e42" auto="0" top-xid="9"/>
+<version id="4" started="1477463022" uid="bdff4b34-9b44-11e6-9c91-fb96bba42d18" auto="0" top-xid="18"/>
+<version id="57" started="1477501849" uid="94ffff8c-9bbf-11e6-866f-fc54b02648c5" auto="0" top-xid="20"/>
+<version id="59" started="1477581933" uid="a4e3acba-9c59-11e6-9831-efe2e4e81bfd" auto="0" top-xid="157"/>
+</history>
+<styles>
+<s type="P" name="Normal" followedby="Current Settings" props="font-weight:normal; font-family:Times New Roman; margin-top:0pt; color:000000; margin-left:0pt; text-align:left; widows:2; font-style:normal; text-indent:0in; text-position:normal; font-variant:normal; bgcolor:transparent; line-height:1.0; text-decoration:none; margin-bottom:0pt; margin-right:0pt; font-size:12pt; font-stretch:normal"/>
+</styles>
+<lists>
+<l id="1000" parentid="0" type="5" start-value="0" list-delim="%L" list-decimal="NULL"/>
+<l id="1002" parentid="0" type="5" start-value="0" list-delim="%L" list-decimal="NULL"/>
+<l id="1004" parentid="0" type="5" start-value="0" list-delim="%L" list-decimal="NULL"/>
+<l id="1006" parentid="0" type="5" start-value="0" list-delim="%L" list-decimal="NULL"/>
+</lists>
+<pagesize pagetype="Letter" orientation="portrait" width="8.500000" height="11.000000" units="in" page-scale="1.000000"/>
+<section xid="8" props="page-margin-footer:0.5in; page-margin-header:0.5in">
+<p style="Normal" xid="9" props="text-align:center; dom-dir:ltr"><c props="font-weight:bold">Requirements Analysis and Specifications Document</c></p>
+<p style="Normal" xid="158" props="text-align:center; dom-dir:ltr"><c props="font-weight:bold">DRAFT</c></p>
+<p style="Normal" xid="92" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="93" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="94" props="text-align:left; dom-dir:ltr"><c>Actors: car, user, system</c></p>
+<p style="Normal" xid="95" props="text-align:left; dom-dir:ltr"><c props="font-weight:bold">Goals:</c></p>
+<p level="1" listid="1000" parentid="0" style="Normal" xid="96" props="list-delim:%L; list-decimal:NULL; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; dom-dir:ltr; text-align:left; field-font:Arial"><c props="list-tag:1001"></c><field type="list_label" xid="154" props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal">	</c><c>User can use the system from smartphones</c></p>
+<p style="Normal" xid="97" props="text-align:left; dom-dir:ltr"><c>Reqs:</c></p>
+<p style="Normal" xid="98" props="text-align:left; dom-dir:ltr"><c>- System must be compatible with IOS, Android mobile operating systems</c></p>
+<p style="Normal" xid="99" props="text-align:left; dom-dir:ltr"><c>Da:</c></p>
+<p style="Normal" xid="100" props="text-align:left; dom-dir:ltr"><c>- user’s smartphone has an IOS or Android operating system</c></p>
+<p level="1" listid="1002" parentid="0" style="Normal" xid="101" props="list-delim:%L; list-decimal:NULL; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; dom-dir:ltr; text-align:left; field-font:Arial"><c props="list-tag:1003"></c><field type="list_label" xid="155" props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal">	</c><c>Registered users can locate all unoccupied electric cars parked nearby or on the specific zone</c></p>
+<p style="Normal" xid="102" props="text-align:left; dom-dir:ltr"><c>Reqs:</c></p>
+<p style="Normal" xid="103" props="text-align:left; dom-dir:ltr"><c>- The system must register users</c></p>
+<p style="Normal" xid="104" props="text-align:left; dom-dir:ltr"><c>-</c></p>
+<p style="Normal" xid="105" props="text-align:left; dom-dir:ltr"><c>Da:</c></p>
+<p style="Normal" xid="106" props="text-align:left; dom-dir:ltr"><c>- all electric cars have GPS navigators</c></p>
+<p style="Normal" xid="107" props="text-align:left; dom-dir:ltr"><c>- user has a GPS navigation turned on while using the app</c></p>
+<p level="1" listid="1004" parentid="0" style="Normal" xid="108" props="list-delim:%L; list-decimal:NULL; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; dom-dir:ltr; text-align:left; field-font:Arial"><c props="list-tag:1005"></c><field type="list_label" xid="156" props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal">	</c><c>User can reserve 1 unoccupied electric car for 1 hour</c></p>
+<p style="Normal" xid="109" props="text-align:left; dom-dir:ltr"><c>Reqs:</c></p>
+<p style="Normal" xid="110" props="text-align:left; dom-dir:ltr"><c>- when 1 hour after reservation is up, car becomes unoccupied</c></p>
+<p style="Normal" xid="111" props="text-align:left; dom-dir:ltr"><c>- when 1 hour after reservation is up, user is charged for 1 euro</c></p>
+<p style="Normal" xid="112" props="text-align:left; dom-dir:ltr"><c>- the system stops the timer when user starts engine</c></p>
+<p style="Normal" xid="113" props="text-align:left; dom-dir:ltr"><c>-(if a user stops the engine and walking off the car the it charges less money)</c></p>
+<p style="Normal" xid="114" props="text-align:left; dom-dir:ltr"><c>-user must “tell” the system when he stops to use the car</c></p>
+<p style="Normal" xid="115" props="text-align:left; dom-dir:ltr"><c>Da:</c></p>
+<p level="1" listid="1006" parentid="0" style="Normal" xid="116" props="list-delim:%L; list-decimal:NULL; list-style:Bullet List; start-value:0; margin-left:0.5000in; text-indent:-0.3000in; dom-dir:ltr; text-align:left; field-font:Arial"><c props="list-tag:1007"></c><field type="list_label" xid="157" props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal"></field><c props="width:0in; font-family:Times New Roman; display:inline; font-style:normal; font-weight:normal; bgcolor:transparent; lang:en-US; text-position:normal; text-transform:none; homogeneous:1; color:000000; font-variant:normal; text-decoration:none; font-size:12pt; height:0in; list-style:Bullet List; font-stretch:normal">	</c><c>The system automatically unlocks the reserved car when user is nearby</c></p>
+<p style="Normal" xid="117" props="text-align:left; dom-dir:ltr"><c>Reqs:</c></p>
+<p style="Normal" xid="118" props="text-align:left; dom-dir:ltr"><c>Da:</c></p>
+<p style="Normal" xid="119" props="text-align:left; dom-dir:ltr"><c>- User is notified about driving charges on the screen in the car</c></p>
+<p style="Normal" xid="120" props="text-align:left; dom-dir:ltr"><c>Reqs:</c></p>
+<p style="Normal" xid="121" props="text-align:left; dom-dir:ltr"><c>Da:</c></p>
+<p style="Normal" xid="128" props="text-align:left; dom-dir:ltr"><c><pbr/></c></p>
+<p style="Normal" xid="129" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="130" props="text-align:left; dom-dir:ltr"><c props="font-weight:bold">Introduction</c></p>
+<p style="Normal" xid="131" props="text-align:left; dom-dir:ltr"><c>Description of the system </c></p>
+<p style="Normal" xid="132" props="text-align:left; dom-dir:ltr"><c>The project that we implement  named Car-Sharing Service, Users can reserve and use a car through the platform .Besides the service based on both  mobile application and web applications.</c></p>
+<p style="Normal" xid="133" props="text-align:left; dom-dir:ltr"><c props="font-weight:bold">The functions for user</c></p>
+<p style="Normal" xid="134" props="text-align:left; dom-dir:ltr"><c>Users can use their credentials and payment information to register an account in this system,then they will receive their personal password to access the system.</c></p>
+<p style="Normal" xid="135" props="text-align:left; dom-dir:ltr"><c>When users need a car, they need to locate their current location, then they can see the information about available  cars nearby.After selecting  a car ,user can fallow the route provide by system to approach the car.</c></p>
+<p style="Normal" xid="136" props="text-align:left; dom-dir:ltr"><c>when a user reaches the car who reserved , system will  unlocks the car.As soon as the engine ignites,users can see current charge through the screen on the car.After user get out of the car,system stop charging and locks the car.</c></p>
+<p style="Normal" xid="137" props="text-align:left; dom-dir:ltr"><c>System in order to restrain the behaviour of users , and to encourage virtuous behaviours of users, will carry out some reward and punishment measures.</c></p>
+<p style="Normal" xid="138" props="text-align:left; dom-dir:ltr"><c>The main purpose of this system is to help people who doesn’t  has a car and need to use a car, bring convenience to their life.The system also implements the efficient, convenient and affordable way off renting a car.In addition,it simplifies the artificial mechanism of renting a car.</c></p>
+<p style="Normal" xid="147" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="139" props="text-align:left; dom-dir:ltr"><c props="font-weight:bold">Actual system </c></p>
+<p style="Normal" xid="140" props="text-align:left; dom-dir:ltr"><c>This Car-sharing company  is able to has a systems, according to the user's location  provide them with near the available car’s information and location.After selecting  a car by user, the system will provide a route that users can approach to  the  position of the car.</c></p>
+<p style="Normal" xid="141" props="text-align:left; dom-dir:ltr"><c>when a user  reaches the reserved car, tell the system she already arrive, then  system unlocks the car for user.System also has automatic charging function, the charge of per minute  will appear on the screen in the car.When users leave the car,system stop charging and locks the car.</c></p>
+<p style="Normal" xid="142" props="text-align:left; dom-dir:ltr"><c>System accord to  the finally parking location of the user, as well as  rest of electricity of the car,there are discounts or  fines would  be given to  users .</c></p>
+<p style="Normal" xid="143" props="text-align:left; dom-dir:ltr"><c>This system stores  information both of users and cars into a Mysql database. </c></p>
+<p style="Normal" xid="144" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="145" props="text-align:left; dom-dir:ltr"><c></c></p>
+<p style="Normal" xid="146" props="text-align:left; dom-dir:ltr"><c></c></p>
+</section>
+</abiword>

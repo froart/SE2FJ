@@ -1,4 +1,15 @@
-Car
+sig Energy 
+{
 
-User
+
+}
+
+sig Car {
+
+one Energy
+
+
+}
+
+sig User
 

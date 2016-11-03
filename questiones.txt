@@ -1,3 +1,4 @@
 Questions to professor Di Nitto, 4/11
 1) Considering the answer of professor Mottola about using the github. DOC files are not well performed in github. So github is practically useless in that case as students can't see corrections made by each other, only by commit messages.
-2) Is there any distinctions between APP and System, that we make?  
+2) Is there any distinctions between APP and System, that we make?
+3) "We are trying to specify some performance requirements, e.g. the number of managed cars by the system but we don't have any about it. Should we make some assumptions basing on some other car sharing services"  

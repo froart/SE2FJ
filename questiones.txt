@@ -1,3 +1,3 @@
 Questions to professor Di Nitto, 4/11
 1) Considering the answer of professor Mottola about using the github. DOC files are not well performed in github. So github is practically useless in that case as students can't see corrections made by each other, only by commit messages.
-2)  
+2) Is there any distinctions between APP and System, that we make?  

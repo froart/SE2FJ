@@ -1,4 +1,17 @@
 Questions to professor Di Nitto, 4/11
-1) Considering the answer of professor Mottola about using the github. DOC files are not well performed in github. So github is practically useless in that case as students can't see corrections made by each other, only by commit messages.
+1) Considering the answer of professor Mottola about using the github. 
+DOC files are not well performed in github. 
+So github is practically useless in that case as students can't see corrections made by each other, only by commit messages.
+ANS: professor Motolla was assuming that I was talking about Latex. In that case it can be managed easily within github as it similar to html.
+
 2) Is there any distinctions between APP and System, that we make?
-3) "We are trying to specify some performance requirements, e.g. the number of managed cars by the system but we don't have any about it. Should we make some assumptions basing on some other car sharing services"  
+ANS: we are considering both front-end and back-end of the system. System is a back-end + front-end.
+
+3) "We are trying to specify some performance requirements, e.g. the number of managed cars by the system but we don't have any about it. 
+Should we make some assumptions basing on some other car sharing services"  
+ANS: Let's take a large city like London. it has like 50mln population. 
+And we assume that the active part of the popuation is 5mln people and only 1mln of them need a car. 
+So we assume that in worst case there are 1mln request per sec.
+So the user can wait for a reservation at worst case - 1 second, which is okay.
+
+

@@ -1,0 +1,22 @@
+domain assumptions:
+- user doesn't scratch the car
+
+
+requirement:
+- web application must be lightweight, so it can work properly on any smartphone
+
+in case of accidents, what will be done? Maybe user has to notify the system about it via web application
+
+
+questions to Di Nitto:
+- how to denote the subgoals in the RASD
+
+
+
+Di Nitto told something about the car's being an actors. 
+
+
+cars can be left only for a certain period of time
+
+requirement:
+user can log in only from one device!!! Otherwise there will be problems with the GPS location

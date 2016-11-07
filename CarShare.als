@@ -10,6 +10,7 @@ abstract sig Person{}
 // Registered User
 sig RegUser extends Person {
 car: lone Car // can reserve the car
+
 }
 // Unregistered User
 sig UnregUser extends Person {}{ 
@@ -17,6 +18,16 @@ sig UnregUser extends Person {}{
 }
 
 // ============================================================================
+
+// PAYMENT
+// ============================================================================
+abstract sig Receipt{}
+abstract sig Dicount extends Receipt {}
+sig Charge extends Receipt {}
+
+
+// ============================================================================
+
 
 // CAR
 // ============================================================================
@@ -47,16 +58,16 @@ battery: one BatteryFulness // battery fulness
 // CONVENTIONS
 // ============================================================================
 
-
-
-fact { 
-no r: RegUser in taken implies state CarState = Available // (Not sure) if no RegUser is in the Car, then Car is available 
-#taken <= 1 // redundant?
+// if no RegUser is in the Car, then Car is available 
+fact CarAvailabilityConvention { 
+all r: RegUser, c: Car | one r in c.taken implies c.occstate = Available
 }
+
 // 1 car can be taken by 1 user
-fact UserCarConvention{
+fact UserandCarConvention{
 all c: Cars, u: User | Car.taken = User.car // ???
 }
+
 // Number of people in the car
 fact NumberOfPersonsInTheCar {
 all c: Car { 
@@ -65,12 +76,23 @@ one RegUser in c.taken implies #Car.passengers <= 5 // If the car is taken by Re
 no RegUser in c.taken implies #Car.passengers = 0 // if car is not taken by RegUser, no one can be in the car 
 // (can be written in more compact way??)
 }}
+
+
+
+
 // ============================================================================
 
 
 // REQUIREMENTS AND DOMAIN ASSUMPTIONS
 // ============================================================================
-fact {}
+
+// 50% full battery encouragement
+fact {
+
+
+
+
+}
 
 
 

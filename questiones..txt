@@ -1,4 +1,9 @@
 Questions to professor Di Nitto, 4/11
+<<<<<<< HEAD:questiones..txt
+1) Considering the answer of professor Mottola about using the github. DOC files are not well performed in github. So github is practically useless in that case as students can't see corrections made by each other, only by commit messages.
+2) Is there any distinctions between APP and System, that we make?  
+3) Are there any suggestions from professor about how to distinguish whether here are two passengers inside of car?
+=======
 1) Considering the answer of professor Mottola about using the github. 
 DOC files are not well performed in github. 
 So github is practically useless in that case as students can't see corrections made by each other, only by commit messages.
@@ -15,3 +20,4 @@ So we assume that in worst case there are 1mln request per sec.
 So the user can wait for a reservation at worst case - 1 second, which is okay.
 
 
+>>>>>>> 820c1e67176b9313b9fe5f5fe15914a8089d4c25:questiones.txt

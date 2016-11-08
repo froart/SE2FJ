@@ -10,13 +10,19 @@ in case of accidents, what will be done? Maybe user has to notify the system abo
 
 questions to Di Nitto:
 - how to denote the subgoals in the RASD
+- APP FOR MOBILES MOSTLY(ONLY)??? ASK DI NITTO. IS IT REASONABLE TO USE APP VIA LAPTOP OR PC?
 
 
-
-Di Nitto told something about the car's being an actors. 
-
-
-cars can be left only for a certain period of time
+cars can be left only for a certain period of time?
 
 requirement:
 user can log in only from one device!!! Otherwise there will be problems with the GPS location
+
+
+GLOSSARY: SPECIFIC AREA: WHAT SIZE??
+
+RESERVATION CANCELLATION!
+
+PASSENGERS DISCOUNT!!!
+
+APP FOR MOBILES MOSTLY(ONLY)??? ASK DI NITTO. IS IT REASONABLE TO USE APP VIA LAPTOP OR PC?

@@ -2,7 +2,7 @@ domain assumptions:
 - user doesn't scratch the car
 
 
-requirement:
+requirement for application:
 - web application must be lightweight, so it can work properly on any smartphone
 
 in case of accidents, what will be done? Maybe user has to notify the system about it via web application
@@ -11,7 +11,7 @@ in case of accidents, what will be done? Maybe user has to notify the system abo
 questions to Di Nitto:
 - how to denote the subgoals in the RASD
 - APP FOR MOBILES MOSTLY(ONLY)??? ASK DI NITTO. IS IT REASONABLE TO USE APP VIA LAPTOP OR PC?
-
+- Can we assume that the electric car can only be charged on the special parking area? It is for Alloy. The point is that charging of the electric car cannot be done without parking, as this process is time consuming 
 
 cars can be left only for a certain period of time?
 
@@ -19,10 +19,8 @@ requirement:
 user can log in only from one device!!! Otherwise there will be problems with the GPS location
 
 
-GLOSSARY: SPECIFIC AREA: WHAT SIZE??
+@GLOSSARY: SPECIFIC AREA: WHAT SIZE??
 
 RESERVATION CANCELLATION!
 
 PASSENGERS DISCOUNT!!!
-
-APP FOR MOBILES MOSTLY(ONLY)??? ASK DI NITTO. IS IT REASONABLE TO USE APP VIA LAPTOP OR PC?

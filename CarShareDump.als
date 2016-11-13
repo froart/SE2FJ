@@ -11,34 +11,56 @@ abstract sig Person{}
 sig RegUser extends Person {
 payment: lone Payment
 } 
-// Unregistered User
-sig UnReg extends Person {}
 
-
-
-/*
-fact UsersWithoutTheCarCannotHavePayment {
-all c: Car | all r: RegUser | (r not in c.wastakenby) implies (no r.payment)  
+// OK
+fact NoUserCanUseTheSameCar {
+no disjoint c1, c2: Car | (c1.takenby = c2.takenby)
 }
-*/
+
+
+// OK
+fact NoTheSamePassengers {
+no disjoint c1, c2: Car | (c1.passengers & c2.passengers) != none
+no disjoint c1,c2: Car | (c1.takenby in c2.passengers)
+}
+
+
+
+// Unregistered User
+sig UnReg extends Person {}{ 
+// unregistered users cannot use a car (can be done in Reqs)
+}
+
 
 
 // PAYMENT
 // ============================================================================
 // Discounts
 abstract sig Discount {}
-sig Discount10Percent extends Discount {}
-sig Discount20Percent extends Discount {}
-sig Discount30Percent extends Discount {}
+// Possible discounts
+lone sig Discount10Percent extends Discount {}
+lone sig Discount20Percent extends Discount {}
+lone sig Discount30Percent extends Discount {}
+// Charges
 abstract sig Charge {}
-sig Euro1 extends Charge{} 
+// Possible Charges
+lone sig Euro1 extends Charge{}
+//
+sig Receipt {} {
+#Receipt >= 0
+no disjoint c1, c2: Car | (c1.takenby.payment.total = c2.takenby.payment.total)
+}
+
 
 sig Payment {
+total: lone Receipt,
 discounts: Discount,
 charges: Charge
-} {
-#discounts >= 0
-#charges >= 0
+} 
+{
+no total implies (#charges = 0) && (#discounts = 0) 
+else
+(#discounts >= 0) && (#charges >= 0)
 }
 
 
@@ -47,79 +69,63 @@ charges: Charge
 abstract sig Parked {}
 sig SpecialParkingArea extends Parked{}
 sig AnyParkingArea extends Parked {}
-sig Driven extends Parked{}
+lone sig Driven extends Parked{}
 
 
 // TIME
 // ============================================================================
 abstract sig Time {}
-sig Less1h extends Time{}
-sig More1h extends Time{}
+lone sig Less1h extends Time{}
+lone sig More1h extends Time{}
 
 // CAR
 // ============================================================================
 
 // Car occupation states
 abstract sig CarOccupationState {}
-sig Available extends CarOccupationState {}
-sig Reserved extends CarOccupationState {}
-sig Occupied extends CarOccupationState {}
-sig Released extends CarOccupationState {}
-sig LostReservation extends CarOccupationState {}
-sig LostOccupation extends CarOccupationState {}
+lone sig Available extends CarOccupationState {}
+lone sig Reserved extends CarOccupationState {}
+lone sig Occupied extends CarOccupationState {}
+lone sig Released extends CarOccupationState {}
+lone sig LostReservation extends CarOccupationState {}
+lone sig LostOccupation extends CarOccupationState {}
 
 // Car charging states
 abstract sig CarChargingState {}
-sig Charging extends CarChargingState {}
-sig NotCharging extends CarChargingState {}
+lone sig Charging extends CarChargingState {}
+lone sig NotCharging extends CarChargingState {}
 
 // Battery fulness
 abstract sig BatteryFulness {}
-sig More50 extends BatteryFulness {}
-sig Less20 extends BatteryFulness {}
-sig More20Less50 extends BatteryFulness {}
+lone sig More50 extends BatteryFulness {}
+lone sig Less20 extends BatteryFulness {}
+lone sig More20Less50 extends BatteryFulness {}
 
 // Engine State
 abstract sig CarEngineState {}
-sig EngineOn extends CarEngineState {}
-sig EngineOff extends CarEngineState {}
+lone sig EngineOn extends CarEngineState {}
+lone sig EngineOff extends CarEngineState {}
 
 // Car
 sig Car {
 occupationstate: one CarOccupationState, // wether car is available, reserved, occupied or released
 chargingstate: one CarChargingState, // wether car is charging or not 
 takenby: lone RegUser, // car can either have a RegUser or not
-wastakenby: lone RegUser, // 
-passengers: set Person, // can carry some persons
-hadpassengers: set Person,
+passengers: Person, // can carry some persons
 battery: one BatteryFulness, // battery fulness
 parked: one Parked,
 enginestate: one CarEngineState,
 reservationtime: lone Time
-}{
+} {
 #passengers >= 0
 #passengers <= 4
-#hadpassengers >= 0
-#hadpassengers <= 4
 }
+
+
 
 
 // CONVENTIONS
 // ============================================================================
-
-
-// OK
-fact NoUserCanUseTheSameCar {
-all c1, c2: Car | ((c1 != c2) and (c1.takenby != none) and (c1.takenby != none)) implies (c1.takenby != c2.takenby)
-}
-
-// OK
-fact NoTheSamePassengers {
-all c1, c2: Car | (c1 != c2) implies (c1.passengers & c2.passengers) = none
-all c1, c2: Car | (c1 != c2) implies (c1.hadpassengers & c2.hadpassengers) = none
-all c1, c2: Car | (c1 != c2) implies (c1.takenby not in c2.passengers)
-all c1, c2: Car | (c1 != c2) implies (c1.wastakenby not in c2.hadpassengers)
-}
 
 // occupationstate: one CarOccupationState, // wether car is available, reserved, occupied or released
 /* Available state implies:
@@ -131,30 +137,22 @@ all c1, c2: Car | (c1 != c2) implies (c1.wastakenby not in c2.hadpassengers)
 6. Engine is off ahahah
 */
 fact CarIsAvailableConventions {
-all c: Car | (c.occupationstate = Available) implies
-(
-//no c.takenby
-no c.takenby and
-no c.wastakenby and
-no c.passengers and
-no c.hadpassengers and
-c.parked != Driven and
-no c.reservationtime
-)}
+all c: Car | (c.occupationstate = Available) implies {
+// 1.
+c.takenby = none
+c.passengers = none
+// 2. 
+c.parked != Driven
+// 3. 
+// no need to implement
+// 4.
+c.reservationtime = none
+//5.
+no c.takenby.payment.total
+}}
 
-/*
-assert AvailabilityConventions {
-	no c: Car | c.occupationstate = Available and
-	(
-		c.takenby != none or
-		c.wastakenby != none or
-		c.passengers != none or
-		c.hadpassengers != none or
-		c.parked = Driven or
-		c.reservationtime != none
-	)
-}
-*/
+
+
 /* Reserved state implies:
 1.1. RegUser in Car.takenby, 
 1.2. no passengers. It means that Car.takenby has RegUser, but neither RegUser is in Car.passengers nor any other Person
@@ -164,29 +162,23 @@ assert AvailabilityConventions {
 5. User don't have payment
 6. engine off
 */
-
 fact CarIsReservedConventions {
-all c: Car | (c.occupationstate = Reserved) implies (
-c.takenby != none and 
-no c.wastakenby and 
-no c.passengers and 
-no c.hadpassengers and
-c.parked != Driven and
+all c: Car | (c.occupationstate = Reserved) implies {
+// 1.1.
+c.takenby != none
+//1.2.
+c.passengers = none
+// 2.
+c.parked != Driven
+// 3. 
+// no need to implement
+// 4.1.
 c.reservationtime = Less1h
-)}
-
-/*
-assert ReservationConventions {
-all c: Car | (c.occupationstate = Reserved) implies (
-c.takenby != none or
-no c.wastakenby or
-no c.passengers or
-no c.hadpassengers or
-c.parked != Driven or 
-c.reservationtime = Less1h
-)}
-*/
-//check ReservationConventions
+//5.
+no c.takenby.payment.total
+//6.
+//c.enginestate = EngineOff
+}}
 
 
 /*LostReservation state implies
@@ -196,31 +188,22 @@ c.reservationtime = Less1h
 3. reservationtime must be More1h
 4. User must have payment 1 euro
 */
+fact CarIsLostReservation {
+all c: Car | (c.occupationstate = LostReservation) implies {
+//1.1.
+c.takenby = none
+//1.2.
+c.passengers = none
+//2.
+c.enginestate = EngineOff
+//3.
+c.reservationtime = More1h
+//4.
+c.takenby.payment.total = Receipt
+c.takenby.payment.charges = (c.takenby.payment.charges + Euro1)
+}}
 
-fact CarIsLostReservationConventions {
-all c: Car | (c.occupationstate = LostReservation) implies (
-(no c.takenby) and 
-(c.wastakenby != none) and
-(no c.passengers) and
-(no c.hadpassengers) and
-(c.enginestate = EngineOff) and
-(c.reservationtime = More1h) and
-(c.wastakenby.payment.charges = c.wastakenby.payment.charges + Euro1)
-)}
 
-/*
-assert LostReservationConventions {
-all c: Car | (c.occupationstate = LostReservation) implies (
-(no c.takenby) or 
-(c.wastakenby != none) or
-(no c.passengers) or
-(no c.hadpassengers) or
-(c.enginestate = EngineOff) or
-(c.reservationtime = More1h) or
-(c.wastakenby.payment.charges = c.wastakenby.payment.charges + Euro1)
-)}
-*/
-//check LostReservationConventions 
 
 /* Occupied state implies:
 1.1. RegUser in Car.takenby, 
@@ -230,25 +213,24 @@ all c: Car | (c.occupationstate = LostReservation) implies (
 4. no reservationtime
 5. User don't have payment
 */
-
 fact CarIsOccupiedConventions {
-all c: Car | (c.occupationstate = Occupied) implies (
-(c.takenby != none) and
-(no c.hadpassengers) and
-(no c.reservationtime) and 
-(no c.wastakenby)
-)}
+all c: Car | (c.occupationstate = Occupied) implies {
+//1.1
+c.takenby != none
+//1.2.
+// 2.
+// no need to implement
+// 3. 
+// no need to implement
+// 4.
+c.reservationtime = none
+//5.
+no c.takenby.payment.total
+}}
 
-/*
-assert OccupiedConventions {
-all c: Car | (c.occupationstate = Occupied) implies (
-(c.takenby != none) or
-(no c.hadpassengers) or
-(no c.reservationtime) or
-(no c.wastakenby)
-)}
-*/
-//check OccupiedConventions
+
+
+
 
 /*LostOccupation state implies
 1.1 no RegUser in Car.takenby. 
@@ -257,30 +239,21 @@ all c: Car | (c.occupationstate = Occupied) implies (
 3. 
 USer must have payment
 */
+fact CarIsLostOccupation {
+all c: Car | (c.occupationstate = LostOccupation) implies {
+//1.1.
+c.takenby = none
+//1.2.
 
-fact CarIsLostOccupationConventions {
-all c: Car | (c.occupationstate = LostOccupation) implies (
-(no c.takenby) and
-(c.wastakenby != none) and
-(no c.passengers) and
-(c.hadpassengers != none) and
-(c.enginestate = EngineOff) and 
-(c.reservationtime = More1h) and
-(c.wastakenby.payment != none)
-)}
-/*
-assert LostOccupationConventions {
-all c: Car | (c.occupationstate = LostOccupation) implies (
-(no c.takenby) or
-(c.wastakenby != none) or
-(no c.passengers) or
-(c.hadpassengers != none) or
-(c.enginestate = EngineOff) or
-(c.reservationtime = More1h) or
-(c.wastakenby.payment != none)
-)}
-*/
-//check LostOccupationConventions 
+//2.
+c.enginestate = EngineOff
+//3.
+c.reservationtime = More1h
+//4.
+c.takenby.payment.total = Receipt
+}}
+
+
 
 
 
@@ -291,16 +264,19 @@ all c: Car | (c.occupationstate = LostOccupation) implies (
 4. User must have payment
 5. no time
 */
-
 fact CarIsReleasedConventions {
-all c: Car |  (c.occupationstate = Released) implies (
-(no c.takenby) and 
-(c.takenby != none) and
-(c.enginestate = EngineOff) and
-(no c.passengers) and
-(c.wastakenby.payment != none) and
-(no c.reservationtime)
-)}
+all c: Car |  c.occupationstate = Released => {
+//1.
+c.takenby = none
+//2.
+c.enginestate = EngineOff
+//3. 
+// no need to implement
+//4. 
+c.takenby.payment.total = Receipt
+//5.
+c.reservationtime = none
+}}
 
 
 
@@ -308,9 +284,8 @@ all c: Car |  (c.occupationstate = Released) implies (
 /* Charging state:
 1. <=> car is parked
 */
-
-
 fact CarChargingConventions {
+//1.
 all c: Car | (c.chargingstate = Charging) implies (c.parked != Driven)
 }
 
@@ -326,15 +301,13 @@ all c: Car | (c.chargingstate = Charging) implies (c.parked != Driven)
 //takenby: lone RegUser, // car can either have a RegUser or not
 /*
 1. user != non implies states
+
+
 */
-
-
-/*
 fact TakenByConvention {
-all c: Car | (no c.takenby) implies {
+all c: Car | (no c.takenby) implies 
 (c.occupationstate = Available) or (c.occupationstate = LostReservation) or (c.occupationstate = LostOccupation)
-}}
-*/
+}
 
 //passengers: some Person, // can carry some persons
 /*
@@ -368,13 +341,10 @@ Driving:
 4. What about 2 passengers?
 5. Engine must be on
 */ 
-
-// ___________________________________
-/*
 fact CarIsDrivenConventions {
 all c: Car | (c.parked = Driven) implies {
 //1.
-c.takenby != none
+#c.takenby > 0
 c.takenby in c.passengers
 //2.
 c.occupationstate = Occupied
@@ -385,7 +355,7 @@ c.chargingstate = NotCharging
 //5.
 c.enginestate = EngineOn
 }}
-*/
+
 
 // enginestate: one CarEngineState
 /*
@@ -395,10 +365,7 @@ EngineOn:
 /*
 EngineOff:
 1. must be parked
-*/
-
-
-
+*/ 
 fact CarEngineConventions {
 all c: Car | (c.enginestate = EngineOn) implies {
 //1.
@@ -423,45 +390,22 @@ c.parked != Driven
 1. <=> EngineOff && Occupied || Reserved
 2. passengers can either be in the car or not
 */ 
-
-// __________________________________________________
-/*
 fact CarLess1hTimeConventions {
 all c:Car | (c.reservationtime = Less1h) implies {
-(c.enginestate = EngineOff) and // to run a countdown engine must be off
+c.enginestate = EngineOff // to run a countdown engine must be off
 ((c.occupationstate = Occupied) or (c.occupationstate = Reserved))
 }}
-*/
+
 
 /* More1h:
 1. <=> EngineOff && LostResevation || LostOccupation
 2. passengers can either be in the car or not
 */ 
-//_________________________________
-/*
 fact CarMore1hTimeConventions {
 all c:Car | (c.reservationtime = More1h) implies {
-((c.enginestate = EngineOff) and ((c.occupationstate = LostOccupation) or (c.occupationstate = LostReservation)))
+c.enginestate = EngineOff
+((c.occupationstate = LostOccupation) or (c.occupationstate = LostReservation))
 }}
-*/
-
-
-fact TakenWasTakenConventions {
-all c: Car | (#c.takenby > 0) implies (#c.wastakenby = 0)
-or
-all c: Car | (#c.wastakenby > 0) implies (#c.takenby = 0)
-or
-all c: Car | (#c.passengers > 0) implies (#c.hadpassengers = 0)
-or
-all c: Car | (#c.hadpassengers > 0) implies (#c.passengers = 0)
-}
-
-/*
-fact PassengersConvention {
-//all p: Car.passengers | 
-
-}
-*/
 
 
 /*
@@ -474,12 +418,12 @@ c.takenby != none implies #c.passengers <= 4 else // If the car is taken by RegU
 */
 // ============================================================================
 
-// ENCOURAGEMENT
+// REQUIREMENTS
 // ============================================================================
 
 // 2 passengers discount????
 fact More2PassengersDiscount {
-all c: Car, oc: c.occupationstate, p: Payment | (((oc = Released) or (oc = LostOccupation)) && (#c.hadpassengers >= 3)) implies p.discounts = (p.discounts + Discount10Percent)     
+//all c: Car, p: Payment | (c.occstate = Occupied) //&& (#c.passengers >= 3) implies p.discounts + Discount10Percent
 }
 // 50% full battery discount
 fact More50PercentEnergyDiscount{
@@ -493,12 +437,11 @@ all c: Car, oc: c.occupationstate, p: Payment | ((( oc = Released) or (oc = Lost
 
 // ============================================================================
 
-pred show () {
-//Car.occupationstate = LostReservation
-some c: Car | c.occupationstate = LostReservation
-//Car.occupationstate = Released
+pred show (){
+#Car = 2
+#RegUser = 3
+#Receipt = 2
 }
 
 
-//check TakenBy
-run show for 10
+run show 

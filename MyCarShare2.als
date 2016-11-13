@@ -385,5 +385,6 @@ pred show {}
 //run lostreservation for 6
 //run occupied for 6
 //run lostoccupation for 6
-run any for 8
+run released
+//run any for 8
 //run show

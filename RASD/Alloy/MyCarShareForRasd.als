@@ -1,6 +1,6 @@
 // ALLOY SPECIFICATION 
 // FOR CARSHARING SYSTEM RASD
-// AUTHOR: ARTEMIY FROLOV, LU JIA
+// AUTHOR: ARTEMIY FROLOV
 
 // PEOPLE
 // ==============================
@@ -13,11 +13,6 @@ payment: lone Payment
 } 
 // Unregistered User
 sig UnReg extends Person {}
-
-
-
-
-
 
 // PAYMENT
 // ==============================
@@ -89,7 +84,6 @@ reservationtime: lone Time
 #hadpassengers >= 0
 #hadpassengers <= 4
 }
-
 
 // CONVENTIONS
 // ==============================
@@ -226,7 +220,6 @@ all c: Car, oc: c.occupationstate, p: c.wastakenby.payment | ((( oc = Released) 
 }
 
 // ==============================
-
 
 // TESTING
 // ==============================

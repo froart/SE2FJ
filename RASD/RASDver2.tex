@@ -1,0 +1,69 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[document]{ragged2e}
+\usepackage{graphicx}
+\usepackage{comment}
+
+\graphicspath{{images/}}
+
+
+% from here content will be shown
+\begin{document}
+
+\begin{titlepage}
+%\maketitle
+\centering
+{\Huge REQUIREMENTS ANALYSIS AND SPECIFICATION DOCUMENT} \\
+\vspace{1cm}
+\includegraphics[width=5cm]{Logo_Politecnico_Milano.png} \\
+\vspace{1cm}
+Artemiy Frolov, mat. 876373 \\
+\vspace{0.5cm}
+autumn 2016
+\end{titlepage}
+
+% CONTENTS
+
+\tableofcontents{}
+
+\newpage
+% END CONTENTS
+
+% INTRODUCTION
+\section{Introduction}
+\subsection{Description of the system} \\
+
+The project that we are implementing is called Car-Sharing Service, with the help of
+which users can reserve the electrical car and use it. The service is based on web
+application with one target of people: \\
+\begin{itemize}
+	\item users \\
+\end{itemize}
+Users must provide information about themselves, including their credentials and
+payment information in order to register an account in this system, and access it.
+Users can locate available electrical cars nearby or in the certain area. Also users can
+see current battery fulness of each car. \\
+After selecting the car, user can reserve it for up to one hour. When a user reaches the
+reserved car, system allows the user to unlock the car. As soon as the engine ignites,
+users can see current charges through the screen in the car. \\
+User can leave the car for a short period of time without missing the car reservation.
+When the user tells the system that he doesn’t need the car no more, it stops charging
+the user. At this point the car can’t be controlled by the user no more and it be
+becomes available for users again. \\
+System, in order to restrain the behaviour of users, and to encourage virtuous
+behaviours of users, will carry out some reward and punishment features.
+
+\subsubsection{Actual system}
+
+Sometime ago the car sharing companies used the system according to which the the
+car identifies users only by their membership cards. Such system forces users to have
+membership cards, that must be ordered and collected. \\
+The system we suggest reduces the necessity of having such cards, but lets the users to
+use the car via web application, where only registration is needed. \\
+During registration user provides all the necessary information, including payment
+credentials.
+
+\subsection{Goals}
+
+
+\end{document}

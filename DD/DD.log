@@ -1,23 +1,22 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.5)  24 NOV 2016 21:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.5)  25 NOV 2016 12:21
 entering extended mode
 **./DD.tex
 (DD.tex
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\report.cls"
-Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
-\c@chapter=\count80
-\c@section=\count81
-\c@subsection=\count82
-\c@subsubsection=\count83
-\c@paragraph=\count84
-\c@subparagraph=\count85
-\c@figure=\count86
-\c@table=\count87
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
@@ -346,7 +345,7 @@ Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 Package: footmisc 2011/06/06 v5.5b a miscellany of footnote facilities
 \FN@temptoken=\toks16
 \footnotemargin=\dimen103
-\c@pp@next@reset=\count88
+\c@pp@next@reset=\count87
 Package footmisc Info: Declaring symbol style bringhurst on input line 855.
 Package footmisc Info: Declaring symbol style chicago on input line 863.
 Package footmisc Info: Declaring symbol style wiley on input line 872.
@@ -398,7 +397,7 @@ Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count89
+\Gread@gobject=\count88
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
@@ -406,38 +405,37 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\comment\comment.sty"
 \CommentStream=\write3
 
-Excluding comment 'comment') Excluding 'comment' comment. (DD.aux)
+Excluding comment 'comment') (DD.aux)
 \openout1 = `DD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-Package ragged2e Info: ABD: executing \RaggedRight on input line 16.
-
-ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 16.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 11.
+ ABD: EverySelectfont initializing macros
+LaTeX Info: Redefining \selectfont on input line 11.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count90
+\scratchcounter=\count89
 \scratchdimen=\dimen106
 \scratchbox=\box26
-\nofMPsegments=\count91
-\nofMParguments=\count92
+\nofMPsegments=\count90
+\nofMParguments=\count91
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count93
+\MPscratchCnt=\count92
 \MPscratchDim=\dimen107
-\MPnumerator=\count94
-\makeMPintoPDFobject=\count95
+\MPnumerator=\count93
+\makeMPintoPDFobject=\count94
 \everyMPtoPDFconversion=\toks19
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
@@ -489,26 +487,37 @@ File: images/Logo_Politecnico_Milano.png Graphic file (type png)
 
 <use images/Logo_Politecnico_Milano.png>
 Package pdftex.def Info: images/Logo_Politecnico_Milano.png used on input line 
-22.
-(pdftex.def)             Requested size: 113.81102pt x 83.6437pt.
+18.
+(pdftex.def)             Requested size: 142.26378pt x 104.54903pt.
  [1
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/Logo_Politecnico
-_Milano.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
+_Milano.png>] (DD.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 2.
+)
+\tf@toc=\write4
+\openout4 = `DD.toc'.
+
+ [1]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
- [1] (DD.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
+ [2] (DD.aux) ) 
 Here is how much of TeX's memory you used:
- 2026 strings out of 493334
- 27997 string characters out of 3136678
- 84131 words of memory out of 3000000
- 5541 multiletter control sequences out of 15000+200000
- 5100 words of font info for 19 fonts, out of 3000000 for 9000
+ 2029 strings out of 493334
+ 28018 string characters out of 3136678
+ 84774 words of memory out of 3000000
+ 5534 multiletter control sequences out of 15000+200000
+ 8193 words of font info for 29 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  40i,4n,25p,236b,147s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
@@ -516,9 +525,9 @@ m/cmbx12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
 cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
 17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10
 .pfb>
-Output written on DD.pdf (2 pages, 117079 bytes).
+Output written on DD.pdf (3 pages, 124695 bytes).
 PDF statistics:
- 28 PDF objects out of 1000 (max. 8388607)
+ 31 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

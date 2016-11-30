@@ -3,6 +3,8 @@
 \usepackage[document]{ragged2e}
 \usepackage{graphicx}
 \usepackage{comment}
+\usepackage[normalem]{ulem} % for strikethrough text
+\usepackage{float} % for passing float parameter into the picture environment
 
 \graphicspath{{images/}}
 
@@ -11,25 +13,26 @@
 \begin{document}
 
 \begin{titlepage}
-%\maketitle
 \centering
-{\Huge DESIGN DOCUMENT} \\
-\vspace{1cm}
-\includegraphics[width=5cm]{Logo_Politecnico_Milano.png} \\
-\vspace{1cm}
+{\Large DESIGN DOCUMENT} \\
+\begin{figure}[h]
+\centering
+\includegraphics[width=5cm]{Logo_Politecnico_Milano.png}
+\caption{Politecnico di Milano}
+\label{fig:PoliMi}
+\end{figure}
+\textbf{version 1.0} \\
+\vspace{0.5cm}
 Artemiy Frolov, mat. 876373 \\
 \vspace{0.5cm}
 autumn 2016
 \end{titlepage}
 
-% CONTENTS
 
 \tableofcontents{}
 
 \newpage
-% END CONTENTS
 
-% INTRODUCTION
 \section{Introduction}
 \subsection{Purpose}
 
@@ -41,33 +44,89 @@ This document is directed to developers and is necessary to state these aspects 
 	\item runtime view 
 	\item choosed architectural styles and patterns
 	\item algorithm design of key components 
-	\item possiby include some extensions of the user interface 
+	\item possibly include some extensions of the user interface defined in RASD 
 \end{itemize}
 
 \subsection{Scope}
 
+CarSharing is a web-based software application that helps car-sharing companies to increase usability of their service, by providing more convenient way of renting electric cars for clients via smartphones, hence helping clients to use the service in a more comfortable way. Thus, the software is targed only to:
+\begin{itemize}
+	\item Users
+\end{itemize}    
 
-
+System allow clients(Users) to locate available electrical cars, with all relevant information about it (inluding current battery fulness, address, registered number) nearby or in the specific area. \\ 
+After selecting the car, user can reserve it for up to one hour. When a user reaches the reserved car, system allows the user to unlock the car via button in the web-app. As soon as the engine ignites, the system confirms that the car is now occupied and user can see current charges through the screen in
+the car. \\
+User can leave the car for a short period of time without missing the car occupation. When the user is no more needs the car, he presses the "Stop the trip" button, system locks the car and collect the money from the bank account, provided by user during registration. From this point the car is no more controlled by the user no more and it be becomes available again. \\
+System, in order to restrain the behaviour of users, and to encourage virtuous behaviours of users, carries out some reward and punishment features.
+Also the system uses external web-services to present the location of cars and to manage payments.   
 
 \subsection{Definitions, Acronyms, Abbreviations}
 
-
+\begin{itemize}
+	\item RASD: requirement analysis and specification document 
+	\item DD: design document
+	\item SMS: short message service; used to notify users 15 minutes before the reservation time expires, also used for a short period suspendance warning. A SMS gateway is needed to use it.
+	\item SMS gateway: it is a service which allows to send SMS via standard API.
+	\item MVC: model view controller.
+	\item URL: uniform resource locator
+	%\item 
+\end{itemize}
 
 
 \subsection{Reference Documents} 
 
-
+\begin{itemize}
+	\item RASD produced before 1.1
+	\item Specification Document: Assignments 1 and 2 (RASD and DD).pdf
+\end{itemize}
 
 \subsection{Document Structure}
 
+\newpage
 \section{Architectural Design} 
 
+\begin{itemize}
+\item Introduction
+	\begin{itemize}
+		\item Purpose 
+		\item Scope
+		\item Definitions, Acronyms, Abbreviations
+		\item Reference Documents
+		\item Document Structure 
+	\end{itemize}
+\item Architecture Design
+	\begin{itemize}
+		\item Overview:	High level components and their interaction
+		\item Component view
+		\item Deployment view
+		\item Runtime view: mostly contain sequence diagrams to describe the way components interact
+		\item Component	interfaces
+		\item Selected architectural styles and	patterns 
+		\item Other	design decisions
+	\end{itemize}
+\item Algorithm Design
+\item User Interface Design
+\item Requirement Tracebility
+\item Effort Spent
+\item Reference
+
+\end{itemize}
 
 
 
 
 
 
+
+
+
+\section {Effort Spent} 
+\textbf{Artemiy Frolov:}
+\begin{verbatim}
+26/11, 1h
+28/11,
+\end{verbatim} 
 
 \newpage
 % INTRODUCTION END

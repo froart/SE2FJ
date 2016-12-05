@@ -4,5 +4,15 @@
 \contentsline {subsection}{\numberline {1.3}Definitions, Acronyms, Abbreviations}{3}
 \contentsline {subsection}{\numberline {1.4}Reference Documents}{3}
 \contentsline {subsection}{\numberline {1.5}Document Structure}{3}
-\contentsline {section}{\numberline {2}Architectural Design}{4}
-\contentsline {section}{\numberline {3}E}{4}
+\contentsline {section}{\numberline {2}Architectural Design}{5}
+\contentsline {subsection}{\numberline {2.1}Overview}{5}
+\contentsline {subsection}{\numberline {2.2}High level components and their interactions}{6}
+\contentsline {subsection}{\numberline {2.3}Component view}{6}
+\contentsline {subsubsection}{\numberline {2.3.1}Deployment View}{8}
+\contentsline {subsection}{\numberline {2.4}Runtime view}{9}
+\contentsline {subsubsection}{\numberline {2.4.1}Defining area of car search}{9}
+\contentsline {subsubsection}{\numberline {2.4.2}Choose the car}{11}
+\contentsline {subsubsection}{\numberline {2.4.3}Car Is Reserved \#1}{13}
+\contentsline {subsubsection}{\numberline {2.4.4}Car Is Reserved \#2 (continue)}{15}
+\contentsline {subsubsection}{\numberline {2.4.5}Car Is Occupied}{17}
+\contentsline {section}{\numberline {3}Effort Spent}{18}

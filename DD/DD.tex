@@ -43,7 +43,7 @@ autumn 2016
 \section{Introduction}
 \subsection{Purpose}
 
-The purpose of this document is to provide more technical details about the CarSharing System software application 
+The purpose of this document is to provide more technical details about the CarSharing System software application.
 
 This document is directed to developers and is necessary to state these aspects of the developing system: 
 \begin{itemize}
@@ -64,9 +64,9 @@ CarSharing is a web-based software application that helps car-sharing companies 
 System allow clients(Users) to locate available electrical cars, with all relevant information about it (inluding current battery fulness, address, registered number) nearby or in the specific area. \\ 
 After selecting the car, user can reserve it for up to one hour. When a user reaches the reserved car, system allows the user to unlock the car via button in the web-app. As soon as the engine ignites, the system confirms that the car is now occupied and user can see current charges through the screen in
 the car. \\
-User can leave the car for a short period of time without missing the car occupation. When the user is no more needs the car, he presses the "Stop the trip" button, system locks the car and collect the money from the bank account, provided by user during registration. From this point the car is no more controlled by the user no more and it be becomes available again. \\
+User can leave the car for a short period of time without missing the car occupation. When the user no more needs the car, he presses the "Stop the trip" button, system locks the car and collect the money from the bank account, provided by user during registration. From this point the car is no more controlled by the user and it be becomes available again. \\
 System, in order to restrain the behaviour of users, and to encourage virtuous behaviours of users, carries out some reward and punishment features.
-Also the system uses external web-services to present the location of cars and to manage payments.   
+Also the system uses external web-services to present the location of cars on the application website and to manage payments.   
 
 \subsection{Definitions, Acronyms, Abbreviations}
 
@@ -76,8 +76,12 @@ Also the system uses external web-services to present the location of cars and t
 	\item SMS: short message service; used to notify users 15 minutes before the reservation time expires, also used for a short period suspendance warning. A SMS gateway is needed to use it.
 	\item SMS gateway: it is a service which allows to send SMS via standard API.
 	\item MVC: model view controller.
-	\item URL: uniform resource locator
-	%\item 
+	\item REST: REpresentational State Transfer
+	\item RESTful: REST without session
+	\item API: Application Programming Interface
+	\item OS: Operating System
+	\item JDO: Java Data Objects
+	\item JDOQL: Java Data Object Query Language
 \end{itemize}
 
 
@@ -131,7 +135,8 @@ The CarSharing system would have 3 tier client-server architecture.
 \end{figure}
 
 \textbf{Mobile web browser:} browser that user uses on his/her smartphone. \\ 
-\textbf{Web server:} Server that processes http requests. \\
+\vspace{0.5cm}
+\textbf{Web server:} Server that provide webpages to client and acquires input data collected from users' webpages. \\
 Mobile web browser sends http requests to the web server, which responds by sending proper html and js files. \\
 Mobile web browser and web server form the GUI and both correspond to the Presentation tier of the cliet-server high-level architecture. \\
 \vspace{0.5cm}
@@ -139,15 +144,26 @@ Mobile web browser and web server form the GUI and both correspond to the Presen
 Application server corresponds to the Logic tier of the cliet-server high-level architecture. \\
 \vspace{0.5cm}
 \textbf{Car's inner OS:} operating system of the electrical car. \\ 
-\textbf{Database:} Persistent data storage. Implemented as DBMS. \\
+\vspace{0.5cm}
+\textbf{Database:} Persistent data storage. Must be RDBMS. \\
 Database corresponds to the Data tier of the cliet-server high-level architecture. \\
 \vspace{0.5cm}
 Application server receives user's activity information from the web server via RESTful API. Received information is then processed and can be stored in database or/and affect electrical car states. \\
-Application server communicates with the electrical car's inner OS via 3G.\\
+Application server communicates with the electrical car's inner OS via 2G/3G/4G. Cellular network technology can be used. \\
 \vspace{0.5cm}
-Moreover each tier is strongly secured with firewalls to avoid illegal system breaches.
 
-\subsection{High level components and their interactions}
+\begin{figure}[H]
+\centering
+\includegraphics[width=4cm]{tiers.png}
+\caption{Tiers}
+\label{fig:tiers}
+\end{figure}
+
+On the diagram \ref{fig:tiers} tiers are represented. Obviously, that type of tier architecture corresponds to the distributed presentation. \\
+From the diagram \ref{fig:tiers} one might notice that there is no firewall between web and application servers. In this architecture assumtion is made, that \underline{web and application logics run on the same server}. But still database can be located apart from logic server, thus firewall is used. 
+
+
+\subsubsection{High level components and their interactions}
 
 \begin{figure}[H]
 \centering
@@ -166,9 +182,9 @@ Moreover each tier is strongly secured with firewalls to avoid illegal system br
 \end{figure}
 
 \begin{itemize}
-	\item RequestController: manages the incomming http requests from users and redirect them to system services.
+	\item RequestController: manages the incomming requests from users and redirect them to system services.
 	\item RegistrationController: maintains collected registration information, incuding checking validity of inputed data. 
-	\item LogInController: checks if user and password exist in database. 
+	\item LogInController: checks if user and password exist in database and connect user to CarSharing services. 
 	\item Reservationontroller: manages car reservation. The most important part of the system. It: 
 	\begin{itemize}
 	   	\item updates reservation status of the car in database.
@@ -177,16 +193,19 @@ Moreover each tier is strongly secured with firewalls to avoid illegal system br
 	   	\item activates PaymentCalculator to sum up the cost of the ride. 
 	\end{itemize}   
 	\item NotificationController: sends warning messages to the user about soon expire time of reservation or time of car being suspended via SMS. Has access to the database to acquire telephone number of the user.
-	\item LocationController: compares user's and car's locations to enable car controlling features. Communicates with CarController(and implicitly with the Car) to acquire GPS data of the car. Have access to database to acquire general information about the car.  
+	\item LocationController: compares user's and car's locations to enable car controlling features. Communicates with CarController(and implicitly with the Car) to acquire GPS data of the car. Have access to database to acquire general information about the car and provide it to user.  
 	\item CarController: Acquires information of the car from sensors, GPS and other relevant information for the CarSharing system. Sends request to the car for manipulation. 
 	\item PaymentCalculator: sum up the cost of the ride. Sends requests to the CarController to collect sensors information. Collected information is then transformed into charges and discount of the ride. Has access to the database to collect payment information of the user. Uses external payment web services, sends requests to it with the amount of payment to take and address of the charged bank account. During the ride it continuously calculate current charges and send it to the car to show it on the display.
 \end{itemize}
 
-\subsubsection{Deployment View} 
+\subsection{Deployment View} 
 
-
-%TODO
-
+\begin{figure}[H]
+\centering
+\includegraphics[width=10cm]{DeploymentView.png} 
+\caption{Deployment View}
+\label{fig:DepView}
+\end{figure}
 
 \newpage
 \subsection{Runtime view}
@@ -198,9 +217,8 @@ Moreover each tier is strongly secured with firewalls to avoid illegal system br
 \label{fig:3DefAreaOfSearch}
 \end{figure}
 \newpage
-% TODO: change runtime view, add the search for AVAILABLE cars. 
 Firstly user chooses where to search cars: nearby user or nearby the specific area provided by user. In the diagram \ref{fig:3DefAreaOfSearch} at the beggining user either presses the button "Nearby" or he/she inputs address into the "Specific area" field and presses button "Submit". In both cases in the diagram these actions are treated as "User\_desired\_area\_of\_car\_search(coord)" and in both cases browser sends coordinates. \\
-Then coordinates are transferred to the CarController, which compares coordinates with each available car in the database. It also collects current information about the car, including battery fullness.  If car is not further than 3 (km2) from the coordinates it is added to the set of cars\_nearby. Proccess repeats until all cars are checked. \\
+Then coordinates are transferred to the CarController, which compares coordinates with each available car in the database. It also collects current information about the car, including battery fullness.  If car is not further than 3 (km2) from the coordinates it is added to the set of cars\_nearby. Proccess repeats until all avaiable cars are checked. \\
 Then the set of cars\_nearby is sent to external map web service, which is placed in the web page.  
 \newpage
 \subsubsection{Choosing the car}
@@ -221,7 +239,7 @@ When user presses on the car on the map the information about it appears near th
 \label{fig:5CarIsReserved1}
 \end{figure}
 \newpage
-After user reserved the car backward timer is set to 1 hour. Until the timer is not equals to 0 the user can still occupy the car. When user presses the "unlock button" on the web page system checks whether user is close to the car. If not it return the message "too far from the car to unlock". When users coordinates are close to the coordinates of the car and user presses the "unlock button" the system sends request to the car to unlock itself. At this point when user enters the car and starts the engine, Car sends acknowledgement to the system, ReservationController changes car status to the "occupied", kills the timer and requests the web-application to show the occupation page. \\ 
+After user reserved the car backward timer is set to 1 hour. Until the timer is not equals to 0 the user can still occupy the car. When user presses the "unlock button" on the web page system checks whether user is close to the car. If not, it return the message "too far from the car to unlock". When users coordinates are close to the coordinates of the car and user presses the "unlock button" the system sends request to the car to unlock itself. At this point when user enters the car and starts the engine, Car sends acknowledgement to the system, ReservationController changes car status to the "occupied", kills the timer and requests the web-application to show the occupation page. \\ 
 Note: If the user once unlocked the car, being close to the car, the new validated button "lock" button can be used from any distance. \\
 \newpage
 \subsubsection{Car has been reserved(continue)}
@@ -246,7 +264,7 @@ In order to restrict the situation when user get into the car, but timer went to
 \end{figure}
 \newpage
 
-While user is using the car(car is "occupied") the communication between application and car is continuous. ReservationController collects data from car's sensors and check if car's engine is off. In the intermediate step of ReservationController requests this data, PaymentCalculator catches it, transform this data into the additioning amount of charge to add to the already gained amount(works as "accumulator" of charges) and send it back to the car. Car displays this information on the screen in the car. \\
+While user is using the car(car is "occupied") the communication between application and car is continuous. ReservationController collects data from car's sensors and check if car's engine is off. In the intermediate step of ReservationController requests this data, PaymentCalculator catches this data, transform this data into the additioning amount of charge to add to the already gained amount(works as "accumulator" of charges) and send it back to the car. Car displays this information on the screen in the car. \\
 Once user pressed "End Of Trip" button, communication stops and ReservationController sends request to the PaymentCalculator to form the receipt and send it to the external payment service (this procedure is implemented in the diagram \ref{fig:6CarIsReserved2} in the frame "Payment"). 
 \newpage
 
@@ -281,7 +299,7 @@ The key feature while user is using the car is described in the diagram \ref{fig
 \label{fig:CompInter}
 \end{figure}
 
-\subsection{Selected architectural styles and pattens}
+\subsection{Selected architectural styles and patterns}
 \subsubsection{Overall Architecture}
 
 Application is divided into 3 tiers:
@@ -290,6 +308,8 @@ Application is divided into 3 tiers:
 	\item [2)] Application logic (BLL: Business Logic Layer)
 	\item [3)] Thin Client (interface with BLL)
 \end{itemize}
+
+\subsubsection{Selected achitectural styles and patterns}
 
 Architectural style chosen is based on SOA(Service-Oriented Architecture):
 \begin{itemize}
@@ -300,27 +320,19 @@ Architectural style chosen is based on SOA(Service-Oriented Architecture):
 		\item LogInController
 		\item ReservationController
 	\end{itemize}
+	\item Microservices:
+	\begin{itemize}
+		\item CarController
+		\item NotificationController
+		\item BackwardTimer
+		\item PaymentCalculator
+	\end{itemize}
 \end{itemize}
 
-\subsubsection{Protocols}
-
-Protocols that are going to be used are mentioned above. \\
-
-\vspace{0.5cm}
-\textbf{JDBC} \\
-\vspace{0.5cm}
-
-JDBC Protocol will be used in BLL to communicate with DAL. JDBC will be easy to use along with Java business logic code. Besides, Oracle website states, quote "JDBC technology allows you to use the Java programming language to exploit "Write Once, Run Anywhere" capabilities for applications that require access to enterprise data".
-
-\vspace{0.5cm}
-\textbf{RESTful API} \\
-\vspace{0.5cm}
-RESTful API is used to organize commication between client and BLL. \\
-Commonly used communication protocol used in web-applications.
-
-\subsubsection{Selected achitectural styles and patterns}
 \vspace{0.5cm}
 \textbf{MVC} \\
+\vspace{0.5cm}
+
 Obviously, as in most web applications, Model-View-Controller pattern is used. 
 Due to the fact, that Thin Client paradigm is used, View and partly Controller parts will be held on the client side, while the major Controller logic and Model part will be on the Server side.    
 
@@ -332,13 +344,36 @@ Client-Server pattern is comfortable in the sense that all users' requests are m
 Moreover it is also easy to increase scalability via adding additional clusters to the server, if the number of users gets larger. \\
 \newpage
 
+\subsubsection{Protocols}
+
+Protocols that are going to be used are mentioned above. \\
+
+\vspace{0.5cm}
+\textbf{JDO(Java Data Objects)} \\
+\vspace{0.5cm}
+
+JDO API will be used to implement communication between BLL and DAL. JDO can be easily used along with Java business logic code. \\
+Contains JDOQL to run SQL queries to database. \\
+Besides, JDO is database independent, which is convenient. From the oracle.com quote: "Applications written with the JDO API are independent of the underlying database. JDO implementations support many different kinds of transactional data stores, including relational and object databases, XML, flat files, and others." \\
+Moreover, it has other pros like portability, high performance, ease of use, integration with EJB.
+
+\vspace{0.5cm}
+\textbf{RESTful API} \\
+\vspace{0.5cm}
+RESTful API is used to organize commication between client and BLL via http requests. \\
+Commonly used communication protocol used in web-applications.
+\vspace{0.5cm}
+\textbf{Open IoT Stack for Java} \\
+\vspace{0.5cm}
+Will be used to send request to the car, control it and acquire data from it. This is a built solution to control IoT devices, can also be used to, quote "configure the network, such as Wi-Fi and cellular bearers, LAN, firewalling and routing, etc".
+
 
 \section{Algorithm design}
 \label{sub:alg_des}
 \subsection{PaymentCalculator methods}
 In UML sequence diagrams above PaymentCalculator methods are not exposed. \\
 In the pseudo-code below the charging step and sum up procedures are described. Charging step is used in the situation, when user uses the car and the charging information is displayed on the creen in the car. Sum up procedure is used after user used "End The Trip" button or lost reservation to calculate the total cost of the ride and use external payment service to implement the payment procedure. \\
-Also transformation from sensor information to cost function is described. Other functions used in sumUp and calculateChargingStep are not decribed, but their meanings derive from their names.
+Also transformation from sensor information to cost function is described. Other functions used in sumUp and calculateChargingStep are not decribed, but their meanings can be derived from their names.
 
 \begin{lstlisting}[basicstyle=\footnotesize, tabsize=1]
 // continues computation to show on display
@@ -354,7 +389,7 @@ function calculateChargingStep(User $user) {
 	// send $charge to the car's display
 	sendToDisplay($charge);
 }   
-// When user looses the car control (whether by his own or by loosing reservation)
+// When user looses the car control (whether by his own will or by loosing reservation)
 function sumUp(User $user, Charge $charge, Addit_arg $arg) { 
 	if($arg != NULL) {
 	// charge for 1 euro 
@@ -404,18 +439,15 @@ function transformSensorInfoToCost(CarSensInfo $car_sens_inf, Charge $charge) {
 \newpage
 \section{User Interface Design}
 \subsection{Mockups}
-Mockups are already shown in RASD in section 4.2.1.
+Mockups have beem already shown in RASD in section 4.2.1.
 \subsection{Extensions}
-User interface, when user suspend the car and leave it, is introduced on the picture below.
+User interface, when user suspends the car and leaves it, is introduced on the picture below.
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{Extens.jpg} 
 \caption{Extension of the "Occupied" webpage, when car is suspended}
 \label{fig:Extens}
 \end{figure}
-
-
-
 
 \newpage
 \section{Requirement traceability}
@@ -476,6 +508,7 @@ The aim of the project is to satisfy requirements stated in the RASD.
 		\item ReservationController
 		\item PaymentCalculator
 		\item CarController
+		\item + algorithm is described in the paragraph "Algorithm design"
 	\end{itemize}
 	\item {[G8.2]} Users have a 20\% discount on the ride if he left the car with no more than 50\%
 	\begin{itemize}
@@ -483,6 +516,7 @@ The aim of the project is to satisfy requirements stated in the RASD.
 		\item ReservationController
 		\item PaymentCalculator
 		\item CarController
+		\item + algorithm is described in the paragraph "Algorithm design"
 	\end{itemize}
 \end{itemize}
 
@@ -501,13 +535,21 @@ The aim of the project is to satisfy requirements stated in the RASD.
 7/12, 2h
 8/12, 5h
 9/12, 5h
+10/12, 2h
+11/12, 3h
 \end{verbatim} 
 
 \newpage
 \section{References}
-
-
-
+Used tools \\
+The tools we used to create this DD document are:
+\begin{itemize}
+	\item draw.io: for UML models
+	\item Github: for version control
+	\item MiKTeX: to compile the DD.tex file to pdf
+	\item yEd Graph Editor: for graph and diagrams creation
+	\item Pencil: for mockups
+\end{itemize}
 
 
 \end{document}

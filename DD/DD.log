@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.5)  4 DEC 2016 17:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.5)  10 DEC 2016 14:34
 entering extended mode
 **./DD.tex
 (DD.tex
@@ -425,39 +425,63 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \float@box=\box29
 \@float@everytoks=\toks20
 \@floatcapt=\box30
-) (DD.aux)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+\lst@mode=\count91
+\lst@gtempboxa=\box31
+\lst@token=\toks21
+\lst@length=\count92
+\lst@currlwidth=\dimen109
+\lst@column=\count93
+\lst@pos=\count94
+\lst@lostspace=\dimen110
+\lst@width=\dimen111
+\lst@newlines=\count95
+\lst@lineno=\count96
+\lst@maxwidth=\dimen112
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count97
+\lst@skipnumbers=\count98
+\lst@framebox=\box32
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+ (DD.aux)
 \openout1 = `DD.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
-LaTeX Font Info:    ... okay on input line 13.
-Package ragged2e Info: ABD: executing \RaggedRight on input line 13.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+Package ragged2e Info: ABD: executing \RaggedRight on input line 20.
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 13.
+LaTeX Info: Redefining \selectfont on input line 20.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count91
-\scratchdimen=\dimen109
-\scratchbox=\box31
-\nofMPsegments=\count92
-\nofMParguments=\count93
-\everyMPshowfont=\toks21
-\MPscratchCnt=\count94
-\MPscratchDim=\dimen110
-\MPnumerator=\count95
-\makeMPintoPDFobject=\count96
-\everyMPtoPDFconversion=\toks22
+\scratchcounter=\count99
+\scratchdimen=\dimen113
+\scratchbox=\box33
+\nofMPsegments=\count100
+\nofMParguments=\count101
+\everyMPshowfont=\toks22
+\MPscratchCnt=\count102
+\MPscratchDim=\dimen114
+\MPnumerator=\count103
+\makeMPintoPDFobject=\count104
+\everyMPtoPDFconversion=\toks23
 ) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -503,12 +527,14 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count105
+
 <images/Logo_Politecnico_Milano.png, id=1, 666.49pt x 489.83pt>
 File: images/Logo_Politecnico_Milano.png Graphic file (type png)
 
 <use images/Logo_Politecnico_Milano.png>
 Package pdftex.def Info: images/Logo_Politecnico_Milano.png used on input line 
-20.
+27.
 (pdftex.def)             Requested size: 142.26378pt x 104.54903pt.
  [1
 
@@ -524,137 +550,167 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write4
 \openout4 = `DD.toc'.
 
- [1]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 43.
+ [1] [2]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 50.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 43.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
 
-Overfull \hbox (4.33064pt too wide) in paragraph at lines 47--48
+Overfull \hbox (4.33064pt too wide) in paragraph at lines 54--55
 []\OT1/cmr/m/n/12 possibly in-clude some ex-ten-sions of the user in-ter-face d
 e-fined in RASD  
  []
 
 
-Overfull \hbox (3.62091pt too wide) in paragraph at lines 52--53
+Overfull \hbox (3.62091pt too wide) in paragraph at lines 59--60
 \OT1/cmr/m/n/12 way of rent-ing elec-tric cars for clients via smart-phones, he
 nce help-ing clients 
  []
 
-[2] [3] [4] <images/hlarch.png, id=24, 476.53032pt x 340.27126pt>
+[3] [4] [5] <images/hlarch.png, id=27, 658.46pt x 440.64626pt>
 File: images/hlarch.png Graphic file (type png)
 
 <use images/hlarch.png>
-Package pdftex.def Info: images/hlarch.png used on input line 121.
-(pdftex.def)             Requested size: 390.0pt x 278.49982pt.
- [5 <./images/hlarch.png>]
-Overfull \hbox (2.23346pt too wide) in paragraph at lines 138--138
+Package pdftex.def Info: images/hlarch.png used on input line 128.
+(pdftex.def)             Requested size: 390.0pt x 260.99431pt.
+ [6 <./images/hlarch.png (PNG copy)>]
+Overfull \hbox (2.23346pt too wide) in paragraph at lines 145--145
 \OT1/cmr/m/n/12 via REST-ful API. Re-ceived in-for-ma-tion is then pro-cessed a
 nd can be stored 
  []
 
-<images/hlcomponents.png, id=29, 705.63625pt x 521.95pt>
+<images/hlcomponents.png, id=32, 705.63625pt x 531.9875pt>
 File: images/hlcomponents.png Graphic file (type png)
 
 <use images/hlcomponents.png>
-Package pdftex.def Info: images/hlcomponents.png used on input line 147.
-(pdftex.def)             Requested size: 390.0pt x 288.4751pt.
+Package pdftex.def Info: images/hlcomponents.png used on input line 154.
+(pdftex.def)             Requested size: 390.0pt x 294.0227pt.
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<images/componentview.png, id=30, 1072.005pt x 664.4825pt>
+<images/componentview.png, id=33, 1072.005pt x 663.47874pt>
 File: images/componentview.png Graphic file (type png)
 
 <use images/componentview.png>
-Package pdftex.def Info: images/componentview.png used on input line 156.
-(pdftex.def)             Requested size: 390.0pt x 241.73816pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6] [7 <./images/hlcomponents.png>] [8 <./images/componentview.png>]
-<images/3DefAreaOfSearch.png, id=43, 976.64874pt x 765.86125pt>
+Package pdftex.def Info: images/componentview.png used on input line 163.
+(pdftex.def)             Requested size: 390.0pt x 241.373pt.
+ [7 <./images/hlcomponents.png>] [8 <./images/componentview.png>] [9]
+<images/3DefAreaOfSearch.png, id=45, 976.64874pt x 765.86125pt>
 File: images/3DefAreaOfSearch.png Graphic file (type png)
 
 <use images/3DefAreaOfSearch.png>
-Package pdftex.def Info: images/3DefAreaOfSearch.png used on input line 184.
+Package pdftex.def Info: images/3DefAreaOfSearch.png used on input line 196.
 (pdftex.def)             Requested size: 390.0pt x 305.82487pt.
- [9 <./images/3DefAreaOfSearch.png>]
-
-LaTeX Warning: Reference `fig:3DefAreaOfSearch' on page 10 undefined on input l
-ine 188.
-
-[10] <images/4ChooseCar.png, id=51, 645.41125pt x 745.78625pt>
+ [10 <./images/3DefAreaOfSearch.png>] [11]
+<images/4ChooseCar.png, id=53, 645.41125pt x 745.78625pt>
 File: images/4ChooseCar.png Graphic file (type png)
 
 <use images/4ChooseCar.png>
-Package pdftex.def Info: images/4ChooseCar.png used on input line 195.
+Package pdftex.def Info: images/4ChooseCar.png used on input line 209.
 (pdftex.def)             Requested size: 390.0pt x 450.65016pt.
- [11 <./images/4ChooseCar.png>] [12]
-<images/5CarIsReserved1.png, id=60, 987.69pt x 857.2025pt>
+ [12 <./images/4ChooseCar.png>] [13]
+<images/5CarIsReserved1.png, id=62, 1067.99pt x 856.19875pt>
 File: images/5CarIsReserved1.png Graphic file (type png)
 
 <use images/5CarIsReserved1.png>
-Package pdftex.def Info: images/5CarIsReserved1.png used on input line 204.
-(pdftex.def)             Requested size: 390.0pt x 338.46701pt.
- [13 <./images/5CarIsReserved1.png>]
-Overfull \hbox (0.77095pt too wide) in paragraph at lines 208--208
-[]\OT1/cmr/m/n/12 After user re-served the car Back-ward-Timer is set to 1 hour
-. Un-til the timer 
- []
-
-[14] <images/6CarIsReserved2.png, id=68, 1017.8025pt x 524.96124pt>
+Package pdftex.def Info: images/5CarIsReserved1.png used on input line 219.
+(pdftex.def)             Requested size: 390.0pt x 312.66019pt.
+ [14 <./images/5CarIsReserved1.png>] [15]
+<images/6CarIsReserved2.png, id=70, 1016.79875pt x 555.07375pt>
 File: images/6CarIsReserved2.png Graphic file (type png)
 
 <use images/6CarIsReserved2.png>
-Package pdftex.def Info: images/6CarIsReserved2.png used on input line 214.
-(pdftex.def)             Requested size: 390.0pt x 201.15347pt.
- [15 <./images/6CarIsReserved2.png>]
+Package pdftex.def Info: images/6CarIsReserved2.png used on input line 230.
+(pdftex.def)             Requested size: 390.0pt x 212.90366pt.
+ [16 <./images/6CarIsReserved2.png>] [17]
+<images/7DrivingCharges.png, id=78, 746.79pt x 394.47375pt>
+File: images/7DrivingCharges.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:6CarIsReserved2' on page 16 undefined on input li
-ne 219.
+<use images/7DrivingCharges.png>
+Package pdftex.def Info: images/7DrivingCharges.png used on input line 243.
+(pdftex.def)             Requested size: 390.0pt x 206.00632pt.
+ [18 <./images/7DrivingCharges.png>] [19]
+<images/8Notification.png, id=87, 645.41125pt x 305.14pt>
+File: images/8Notification.png Graphic file (type png)
+
+<use images/8Notification.png>
+Package pdftex.def Info: images/8Notification.png used on input line 256.
+(pdftex.def)             Requested size: 390.0pt x 184.38443pt.
+ [20 <./images/8Notification.png>] [21] [22]
+<images/ComponentInterfaces.png, id=98, 866.23625pt x 263.98625pt>
+File: images/ComponentInterfaces.png Graphic file (type png)
+
+<use images/ComponentInterfaces.png>
+Package pdftex.def Info: images/ComponentInterfaces.png used on input line 279.
+
+(pdftex.def)             Requested size: 390.0pt x 118.85312pt.
+ [23 <./images/ComponentInterfaces.png>]
+[24]
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 345.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 349.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 349.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 349.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 349.
+
+Overfull \hbox (102.005pt too wide) in paragraph at lines 357--358
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[25]
+Overfull \hbox (84.00482pt too wide) in paragraph at lines 373--374
+[][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: Reference `fig:6CarIsReserved2' on page 16 undefined on input li
-ne 220.
-
-[16]
-
-LaTeX Warning: Reference `fig:5CarIsReserved1' on page 17 undefined on input li
-ne 227.
+Overfull \hbox (18.00415pt too wide) in paragraph at lines 381--382
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: Reference `fig:6CarIsReserved2' on page 17 undefined on input li
-ne 228.
-
-[17] [18] (DD.aux)
-
-LaTeX Warning: There were undefined references.
+Overfull \hbox (102.005pt too wide) in paragraph at lines 382--383
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+Overfull \hbox (6.00403pt too wide) in paragraph at lines 386--387
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
 
- ) 
+[26] <images/Extens.jpg, id=115, 488.57532pt x 338.76563pt>
+File: images/Extens.jpg Graphic file (type jpg)
+
+<use images/Extens.jpg>
+Package pdftex.def Info: images/Extens.jpg used on input line 412.
+(pdftex.def)             Requested size: 390.0pt x 270.41841pt.
+ [27 <./images/Extens.jpg>] [28] [29] [30] [31] (DD.aux) ) 
 Here is how much of TeX's memory you used:
- 2216 strings out of 493334
- 30661 string characters out of 3136678
- 89989 words of memory out of 3000000
- 5704 multiletter control sequences out of 15000+200000
+ 3858 strings out of 493334
+ 52568 string characters out of 3136678
+ 127960 words of memory out of 3000000
+ 7326 multiletter control sequences out of 15000+200000
  8169 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,5n,25p,697b,249s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on DD.pdf (19 pages, 388942 bytes).
+ 40i,6n,32p,706b,1584s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x8
+6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on DD.pdf (32 pages, 538963 bytes).
 PDF statistics:
- 101 PDF objects out of 1000 (max. 8388607)
+ 156 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,27 @@
+1) Introduction:
+Good day, everyone, my name is Artemiy Frolov and I am going to present the Design Document of the CarSharing system.
+2) High-level architecture:
+On the next slide you can see tiers of the architecture of the system that are gonna be used in the further development of the system.
+Picture on the left represents the high-level architecture. As you can see, in this project only web-application is going to be implemented. Thus, the user can rent the car via web-application through the web-browser. 
+Web-application sends http request to the web server, where this data is then transfered to the application server and maintained there. Afterwards application sends maintained data back to the web server, where it decides how to presents this data. Presentation logic is partially held on the web-server, which, obviously, corresponds to the Thin-Client Paradigm. In another words application is based on the distributed presentation.
+Persistent data is managed by the database server.
+Application server can interact with the car's inner operating system.
+Picture on the left represents tiers, on which one can easily see the distributed presentation architecture.
+
+Also, to avoid illegal system breaches "firewalls" are used between client and the server, between server and the car. Here it is assumed that the web and application servers are based on one server, thus there is no need to use firewalls between them. But it is also assumed that the database server can be provided by the different company, in the other place, thus it is neccessary to use firewall.    
+
+3) High level components:
+On the next slide one can see the high level component diagram. Nothing new.
+4) Component view:
+On the next slide one can see the Component view. 
+Here:
+	- RegistrationController, which provides the registration service to the user.
+	- LogInController, which provides LogIn procedure to the user.
+	- ReservationController, which maintain basically the whole web-application.
+• Subservices:
+	- CarController
+	- NotificationController
+	- BackwardTimer
+	- PaymentCalculator  
+5) Architectural styles and patterns:
+3 layers: Presentation Layer(Thin-Client), Business Logic Layer(BLL), Data Access Layer(DAL).

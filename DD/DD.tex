@@ -302,7 +302,7 @@ The key feature while user is using the car is described in the diagram \ref{fig
 \subsection{Selected architectural styles and patterns}
 \subsubsection{Overall Architecture}
 
-Application is divided into 3 tiers:
+Application is divided into 3 layers:
 \begin{itemize}
 	\item [1)] Database (DAL: Data Access Layer)
 	\item [2)] Application logic (BLL: Business Logic Layer)
@@ -311,21 +311,21 @@ Application is divided into 3 tiers:
 
 \subsubsection{Selected achitectural styles and patterns}
 
-Architectural style chosen is based on SOA(Service-Oriented Architecture):
+\sout{Architectural style chosen is based on SOA(Service-Oriented Architecture):}
 \begin{itemize}
-	\item Service requestor: RequestController
-	\item Service providers:
+	\item \sout{Service requestor: RequestController}
+	\item \sout{Service providers:}
 	\begin{itemize}
-		\item RegistrationController
-		\item LogInController
-		\item ReservationController
+		\item \sout{RegistrationController}
+		\item \sout{LogInController}
+		\item \sout{ReservationController}
 	\end{itemize}
-	\item Microservices:
+	\item \sout{Microservices:}
 	\begin{itemize}
-		\item CarController
-		\item NotificationController
-		\item BackwardTimer
-		\item PaymentCalculator
+		\item \sout{CarController}
+		\item \sout{NotificationController}
+		\item \sout{BackwardTimer}
+		\item \sout{PaymentCalculator}
 	\end{itemize}
 \end{itemize}
 
@@ -550,6 +550,16 @@ The tools we used to create this DD document are:
 	\item yEd Graph Editor: for graph and diagrams creation
 	\item Pencil: for mockups
 \end{itemize}
+\newpage
 
+
+\section{Changelog}
+\begin{itemize}
+	\item v1.1:
+	\begin{itemize}
+		\item in the section "Selected architectural styles and patterns", subsection "Overall architecture", word "tiers" changed to "layers".
+		\item "Service-oriented paradigm (SOA)" is deleted, as it is not suitable for the current application.  
+	\end{itemize}	 	
+\end{itemize}
 
 \end{document}

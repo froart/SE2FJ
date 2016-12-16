@@ -30,3 +30,4 @@
 \contentsline {section}{\numberline {5}Requirement traceability}{32}
 \contentsline {section}{\numberline {6}Effort Spent}{34}
 \contentsline {section}{\numberline {7}References}{35}
+\contentsline {section}{\numberline {8}Changelog}{36}

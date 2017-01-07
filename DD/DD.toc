@@ -10,24 +10,26 @@
 \contentsline {subsection}{\numberline {2.2}Component view}{10}
 \contentsline {subsection}{\numberline {2.3}Deployment View}{12}
 \contentsline {subsection}{\numberline {2.4}Runtime view}{13}
-\contentsline {subsubsection}{\numberline {2.4.1}Defining area of car search}{13}
-\contentsline {subsubsection}{\numberline {2.4.2}Choosing the car}{15}
-\contentsline {subsubsection}{\numberline {2.4.3}Car has been reserved}{17}
-\contentsline {subsubsection}{\numberline {2.4.4}Car has been reserved(continue)}{19}
-\contentsline {subsubsection}{\numberline {2.4.5}Driving charges}{21}
-\contentsline {subsubsection}{\numberline {2.4.6}Send notification}{23}
-\contentsline {subsubsection}{\numberline {2.4.7}Car Is Occupied}{25}
-\contentsline {subsection}{\numberline {2.5}Component interfaces}{26}
-\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{26}
-\contentsline {subsubsection}{\numberline {2.6.1}Overall Architecture}{26}
-\contentsline {subsubsection}{\numberline {2.6.2}Selected achitectural styles and patterns}{26}
-\contentsline {subsubsection}{\numberline {2.6.3}Protocols}{28}
-\contentsline {section}{\numberline {3}Algorithm design}{28}
-\contentsline {subsection}{\numberline {3.1}PaymentCalculator methods}{28}
-\contentsline {section}{\numberline {4}User Interface Design}{31}
-\contentsline {subsection}{\numberline {4.1}Mockups}{31}
-\contentsline {subsection}{\numberline {4.2}Extensions}{31}
-\contentsline {section}{\numberline {5}Requirement traceability}{32}
-\contentsline {section}{\numberline {6}Effort Spent}{34}
-\contentsline {section}{\numberline {7}References}{35}
-\contentsline {section}{\numberline {8}Changelog}{36}
+\contentsline {subsubsection}{\numberline {2.4.1}Registering}{13}
+\contentsline {subsubsection}{\numberline {2.4.2}Log In}{15}
+\contentsline {subsubsection}{\numberline {2.4.3}Defining area of car search}{17}
+\contentsline {subsubsection}{\numberline {2.4.4}Choosing the car}{19}
+\contentsline {subsubsection}{\numberline {2.4.5}Car has been reserved}{21}
+\contentsline {subsubsection}{\numberline {2.4.6}Car has been reserved(continue)}{23}
+\contentsline {subsubsection}{\numberline {2.4.7}Driving charges}{25}
+\contentsline {subsubsection}{\numberline {2.4.8}Send notification}{27}
+\contentsline {subsubsection}{\numberline {2.4.9}Car Is Occupied}{29}
+\contentsline {subsection}{\numberline {2.5}Component interfaces}{30}
+\contentsline {subsection}{\numberline {2.6}Selected architectural styles and patterns}{30}
+\contentsline {subsubsection}{\numberline {2.6.1}Overall Architecture}{30}
+\contentsline {subsubsection}{\numberline {2.6.2}Selected achitectural styles and patterns}{30}
+\contentsline {subsubsection}{\numberline {2.6.3}Protocols}{32}
+\contentsline {section}{\numberline {3}Algorithm design}{32}
+\contentsline {subsection}{\numberline {3.1}PaymentCalculator methods}{32}
+\contentsline {section}{\numberline {4}User Interface Design}{35}
+\contentsline {subsection}{\numberline {4.1}Mockups}{35}
+\contentsline {subsection}{\numberline {4.2}Extensions}{35}
+\contentsline {section}{\numberline {5}Requirement traceability}{36}
+\contentsline {section}{\numberline {6}Effort Spent}{38}
+\contentsline {section}{\numberline {7}References}{39}
+\contentsline {section}{\numberline {8}Changelog}{40}

@@ -28,11 +28,11 @@
 \caption{Politecnico di Milano}
 \label{fig:PoliMi}
 \end{figure}
-\textbf{version 1.0} \\
+\textbf{version 1.2} \\
 \vspace{0.5cm}
 Artemiy Frolov, mat. 876373 \\
 \vspace{0.5cm}
-autumn 2016
+January 2016
 \end{titlepage}
 
 
@@ -209,6 +209,31 @@ From the diagram \ref{fig:tiers} one might notice that there is no firewall betw
 
 \newpage
 \subsection{Runtime view}
+
+
+\subsubsection{Registering}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{1Registering.png} 
+\caption{sequence diagram: Registering user}
+\label{fig:1Registering}
+\end{figure}
+\newpage
+When user is on the main page of the web application, he has 2 options to choose - whether register or log in into the system. When user presses "Sign Up" button, the page with registration form shows up. When user fills the form with all the neccessary information and clicks "Register" button, Parser in the web-browser scans the data in the registration form fields, e.g. to find empty fields in which information is needed to be presented and invalid input information(e.g. e-mail address doesn't contain "@" symbol in it) and etc. \\
+Once Parser finished its work and stated that information might be valid, the system must clarify whether user with provided information is already exists in the DataBase. If not, RegistratioController saves new user information in DB and notifies registration gone successfully.   
+\newpage
+
+\subsubsection{Log In}
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{2LogIn.png} 
+\caption{sequence diagram: Sign in user}
+\label{fig:2LogIn}
+\end{figure}
+\newpage
+When user has already have an account in the CarSharing system, he simply goes to the main page and in the right-upper corner of the page fills the username and the password fields to access the system. Once user input the informaton and clicks "Sign In" button, LogInController checks if such user exists in the DB. If yes, RequestsController is told to provide access to other features of the system. In the further run-time diagrams everytime user sends request to the ReservationController, RequestController checks if this user is allowed to do it. If yes, RequestController redirects user's request to the ReservationController. So this security procedure is ommited in other run-time diagrams. 
+\newpage
+
 \subsubsection{Defining area of car search}
 \begin{figure}[H]
 \centering
@@ -557,9 +582,13 @@ The tools we used to create this DD document are:
 \begin{itemize}
 	\item v1.1:
 	\begin{itemize}
-		\item in the section "Selected architectural styles and patterns", subsection "Overall architecture", word "tiers" changed to "layers".
+		\item In the section "Selected architectural styles and patterns", subsection "Overall architecture", word "tiers" changed to "layers".
 		\item "Service-oriented paradigm (SOA)" is deleted, as it is not suitable for the current application.  
-	\end{itemize}	 	
+	\end{itemize}	
+	\item v1.2:
+	\begin{itemize}
+		\item Run-time diagrams for Registration and Log In procedures are added.
+	\end{itemize} 	
 \end{itemize}
 
 \end{document}

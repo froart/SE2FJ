@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.5)  16 DEC 2016 12:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9) (preloaded format=pdflatex 2016.11.5)  7 JAN 2017 11:55
 entering extended mode
 **./DD.tex
 (DD.tex
@@ -609,117 +609,131 @@ File: images/DeploymentView.png Graphic file (type png)
 Package pdftex.def Info: images/DeploymentView.png used on input line 205.
 (pdftex.def)             Requested size: 284.52756pt x 389.71901pt.
  [11] [12 <./images/DeploymentView.png>]
-<images/3DefAreaOfSearch.png, id=59, 1001.7425pt x 765.86125pt>
+<images/1Registering.png, id=59, 646.415pt x 676.5275pt>
+File: images/1Registering.png Graphic file (type png)
+
+<use images/1Registering.png>
+Package pdftex.def Info: images/1Registering.png used on input line 217.
+(pdftex.def)             Requested size: 390.0pt x 408.17003pt.
+ [13 <./images/1Registering.png>] [14]
+<images/2LogIn.png, id=67, 615.29875pt x 524.96124pt>
+File: images/2LogIn.png Graphic file (type png)
+ <use images/2LogIn.png>
+Package pdftex.def Info: images/2LogIn.png used on input line 229.
+(pdftex.def)             Requested size: 390.0pt x 332.74591pt.
+
+[15 <./images/2LogIn.png>] [16]
+<images/3DefAreaOfSearch.png, id=75, 1001.7425pt x 765.86125pt>
 File: images/3DefAreaOfSearch.png Graphic file (type png)
 
 <use images/3DefAreaOfSearch.png>
-Package pdftex.def Info: images/3DefAreaOfSearch.png used on input line 215.
+Package pdftex.def Info: images/3DefAreaOfSearch.png used on input line 240.
 (pdftex.def)             Requested size: 390.0pt x 298.17049pt.
- [13 <./images/3DefAreaOfSearch.png>] [14]
-<images/4ChooseCar.png, id=67, 645.41125pt x 745.78625pt>
+ [17 <./images/3DefAreaOfSearch.png>] [18]
+<images/4ChooseCar.png, id=84, 645.41125pt x 745.78625pt>
 File: images/4ChooseCar.png Graphic file (type png)
 
 <use images/4ChooseCar.png>
-Package pdftex.def Info: images/4ChooseCar.png used on input line 227.
+Package pdftex.def Info: images/4ChooseCar.png used on input line 252.
 (pdftex.def)             Requested size: 390.0pt x 450.65016pt.
- [15 <./images/4ChooseCar.png>] [16]
-<images/5CarIsReserved1.png, id=75, 1067.99pt x 856.19875pt>
+ [19 <./images/4ChooseCar.png>] [20]
+<images/5CarIsReserved1.png, id=92, 1067.99pt x 856.19875pt>
 File: images/5CarIsReserved1.png Graphic file (type png)
 
 <use images/5CarIsReserved1.png>
-Package pdftex.def Info: images/5CarIsReserved1.png used on input line 237.
+Package pdftex.def Info: images/5CarIsReserved1.png used on input line 262.
 (pdftex.def)             Requested size: 390.0pt x 312.66019pt.
- [17 <./images/5CarIsReserved1.png>] [18]
-<images/6CarIsReserved2.png, id=84, 1016.79875pt x 555.07375pt>
+ [21 <./images/5CarIsReserved1.png>] [22]
+<images/6CarIsReserved2.png, id=100, 1016.79875pt x 555.07375pt>
 File: images/6CarIsReserved2.png Graphic file (type png)
 
 <use images/6CarIsReserved2.png>
-Package pdftex.def Info: images/6CarIsReserved2.png used on input line 248.
+Package pdftex.def Info: images/6CarIsReserved2.png used on input line 273.
 (pdftex.def)             Requested size: 390.0pt x 212.90366pt.
- [19 <./images/6CarIsReserved2.png>] [20]
-<images/7DrivingCharges.png, id=92, 746.79pt x 394.47375pt>
+ [23 <./images/6CarIsReserved2.png>] [24]
+<images/7DrivingCharges.png, id=109, 746.79pt x 394.47375pt>
 File: images/7DrivingCharges.png Graphic file (type png)
 
 <use images/7DrivingCharges.png>
-Package pdftex.def Info: images/7DrivingCharges.png used on input line 261.
+Package pdftex.def Info: images/7DrivingCharges.png used on input line 286.
 (pdftex.def)             Requested size: 390.0pt x 206.00632pt.
- [21 <./images/7DrivingCharges.png>] [22]
-<images/8Notification.png, id=100, 645.41125pt x 305.14pt>
+ [25 <./images/7DrivingCharges.png>] [26]
+<images/8Notification.png, id=117, 645.41125pt x 305.14pt>
 File: images/8Notification.png Graphic file (type png)
 
 <use images/8Notification.png>
-Package pdftex.def Info: images/8Notification.png used on input line 274.
+Package pdftex.def Info: images/8Notification.png used on input line 299.
 (pdftex.def)             Requested size: 390.0pt x 184.38443pt.
- [23 <./images/8Notification.png>] [24] [25]
-<images/ComponentInterfaces.png, id=112, 866.23625pt x 263.98625pt>
+ [27 <./images/8Notification.png>] [28] [29]
+<images/ComponentInterfaces.png, id=128, 866.23625pt x 263.98625pt>
 File: images/ComponentInterfaces.png Graphic file (type png)
 
 <use images/ComponentInterfaces.png>
-Package pdftex.def Info: images/ComponentInterfaces.png used on input line 297.
+Package pdftex.def Info: images/ComponentInterfaces.png used on input line 322.
 
 (pdftex.def)             Requested size: 390.0pt x 118.85312pt.
- [26 <./images/ComponentInterfaces.png>]
-[27]
-Overfull \hbox (2.16817pt too wide) in paragraph at lines 368--369
+ [30 <./images/ComponentInterfaces.png>]
+[31]
+Overfull \hbox (2.16817pt too wide) in paragraph at lines 393--394
 \OT1/cmr/m/n/12 "con-fig-ure the net-work, such as Wi-Fi and cel-lu-lar bear-er
 s, LAN, fire-walling 
  []
 
-[28]
+[32]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 380.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 405.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 384.
+(Font)              <7> on input line 409.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 384.
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 384.
+(Font)              <5> on input line 409.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 409.
 
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omlcmr.fd"
 File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 384.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 409.
 
-Overfull \hbox (132.00531pt too wide) in paragraph at lines 392--393
+Overfull \hbox (132.00531pt too wide) in paragraph at lines 417--418
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (84.00482pt too wide) in paragraph at lines 408--409
+Overfull \hbox (84.00482pt too wide) in paragraph at lines 433--434
 [][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (18.00415pt too wide) in paragraph at lines 416--417
+Overfull \hbox (18.00415pt too wide) in paragraph at lines 441--442
 [][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[29]
-Overfull \hbox (102.005pt too wide) in paragraph at lines 417--418
+[33]
+Overfull \hbox (102.005pt too wide) in paragraph at lines 442--443
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (6.00403pt too wide) in paragraph at lines 421--422
+Overfull \hbox (6.00403pt too wide) in paragraph at lines 446--447
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[30] <images/Extens.jpg, id=132, 488.57532pt x 338.76563pt>
+[34] <images/Extens.jpg, id=148, 488.57532pt x 338.76563pt>
 File: images/Extens.jpg Graphic file (type jpg)
 
 <use images/Extens.jpg>
-Package pdftex.def Info: images/Extens.jpg used on input line 447.
+Package pdftex.def Info: images/Extens.jpg used on input line 472.
 (pdftex.def)             Requested size: 390.0pt x 270.41841pt.
- [31 <./images/Extens.jpg>] [32] [33] [34] [35] [36]
+ [35 <./images/Extens.jpg>] [36] [37] [38] [39] [40]
 (DD.aux) ) 
 Here is how much of TeX's memory you used:
- 3870 strings out of 493334
- 52821 string characters out of 3136678
- 135980 words of memory out of 3000000
- 7336 multiletter control sequences out of 15000+200000
+ 3882 strings out of 493334
+ 53075 string characters out of 3136678
+ 135000 words of memory out of 3000000
+ 7346 multiletter control sequences out of 15000+200000
  8169 words of font info for 30 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,6n,32p,707b,1584s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 40i,6n,32p,713b,1584s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi1
 0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.p
@@ -727,9 +741,9 @@ fb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb>
 <C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
 /Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/P
 rogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on DD.pdf (37 pages, 572483 bytes).
+Output written on DD.pdf (41 pages, 622150 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
+ 194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
